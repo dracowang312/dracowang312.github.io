@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.2.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha256-XOqroi11tY4EFQMR9ZYwZWKj5ZXiftSx36RRuC3anlA=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"draco.wang","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.20.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="ADO.NET概述ADO.NET 是 Microsoft .NET 框架中的一组数据访问组件，提供了与各种数据源（如 SQL Server、Oracle、XML 文件等）的连接和交互的功能。它设计用于支持分布式应用程序的数据访问。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ADO.NET">
+<meta property="og:url" content="https://draco.wang/ADO.NET/index.html">
+<meta property="og:site_name" content="王小龙的博客">
+<meta property="og:description" content="ADO.NET概述ADO.NET 是 Microsoft .NET 框架中的一组数据访问组件，提供了与各种数据源（如 SQL Server、Oracle、XML 文件等）的连接和交互的功能。它设计用于支持分布式应用程序的数据访问。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2024-05-16T14:32:01.000Z">
+<meta property="article:modified_time" content="2024-06-06T00:48:25.759Z">
+<meta property="article:author" content="王小龙">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://draco.wang/ADO.NET/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://draco.wang/ADO.NET/","path":"ADO.NET/","title":"ADO.NET"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>ADO.NET | 王小龙的博客</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">王小龙的博客</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#ADO-NET%E6%A6%82%E8%BF%B0"><span class="nav-number">1.</span> <span class="nav-text">ADO.NET概述</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Connection-%E7%B1%BB"><span class="nav-number">1.1.</span> <span class="nav-text">Connection 类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AF%A6%E7%BB%86%E8%AF%B4%E6%98%8E"><span class="nav-number">1.2.</span> <span class="nav-text">详细说明</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Command-%E7%B1%BB"><span class="nav-number">1.3.</span> <span class="nav-text">Command 类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DataReader-%E7%B1%BB"><span class="nav-number">1.4.</span> <span class="nav-text">DataReader 类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DataSet-%E7%B1%BB"><span class="nav-number">1.5.</span> <span class="nav-text">DataSet 类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DataTable-%E7%B1%BB"><span class="nav-number">1.6.</span> <span class="nav-text">DataTable 类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DataAdapter-%E7%B1%BB"><span class="nav-number">1.7.</span> <span class="nav-text">DataAdapter 类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DataView-%E7%B1%BB"><span class="nav-number">1.8.</span> <span class="nav-text">DataView 类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SQL%E6%B3%A8%E5%85%A5"><span class="nav-number">1.9.</span> <span class="nav-text">SQL注入</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">王小龙</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">11</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://draco.wang/ADO.NET/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="王小龙">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="王小龙的博客">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="ADO.NET | 王小龙的博客">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          ADO.NET
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2024-05-16 22:32:01" itemprop="dateCreated datePublished" datetime="2024-05-16T22:32:01+08:00">2024-05-16</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2024-06-06 08:48:25" itemprop="dateModified" datetime="2024-06-06T08:48:25+08:00">2024-06-06</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h2 id="ADO-NET概述"><a href="#ADO-NET概述" class="headerlink" title="ADO.NET概述"></a>ADO.NET概述</h2><p>ADO.NET 是 Microsoft .NET 框架中的一组数据访问组件，提供了与各种数据源（如 SQL Server、Oracle、XML 文件等）的连接和交互的功能。它设计用于支持分布式应用程序的数据访问。</p>
+<span id="more"></span>
+
+<p>ADO.NET 主要由以下几个关键组件组成：</p>
+<p><strong>连接（Connection）</strong>：用于建立与数据库的连接。</p>
+<p><strong>命令（Command）</strong>：用于执行 SQL 查询或存储过程。</p>
+<p><strong>数据读取器（DataReader）</strong>：用于读取数据，提供一种高效的、只进只读的访问方式，不需要占用内存空间。</p>
+<p><strong>数据集（DataSet）和数据表（DataTable）</strong>：用于在内存中存储数据，支持离线操作。</p>
+<p><strong>数据适配器（DataAdapter）</strong>：用于在数据源和 DataSet 之间传输数据。</p>
+<p><strong>数据视图（DataView）</strong>：用于对 DataTable 数据进行排序、筛选和搜索。</p>
+<h3 id="Connection-类"><a href="#Connection-类" class="headerlink" title="Connection 类"></a>Connection 类</h3><p>当然，下面是一个示例代码，演示如何在 C# 中新建一个 <code>SqlConnection</code> 对象并连接到 SQL Server 数据库：</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">using</span> System.Data.SqlClient;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>()</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">// 定义连接字符串</span></span><br><span class="line">        <span class="built_in">string</span> connectionString = <span class="string">&quot;Server=your_server_name;Database=your_database_name;User Id=your_username;Password=your_password;&quot;</span>;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 创建 SqlConnection 对象</span></span><br><span class="line">        <span class="keyword">using</span> (SqlConnection connection = <span class="keyword">new</span> SqlConnection(connectionString))</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">try</span></span><br><span class="line">            &#123;</span><br><span class="line">                <span class="comment">// 打开连接</span></span><br><span class="line">                connection.Open();</span><br><span class="line">                Console.WriteLine(<span class="string">&quot;Connection opened successfully.&quot;</span>);</span><br><span class="line"></span><br><span class="line">                <span class="comment">// 在这里可以执行数据库操作</span></span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">catch</span> (Exception ex)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="comment">// 捕获并处理异常</span></span><br><span class="line">                Console.WriteLine(<span class="string">&quot;An error occurred: &quot;</span> + ex.Message);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">finally</span></span><br><span class="line">            &#123;</span><br><span class="line">                <span class="comment">// 确保连接被关闭</span></span><br><span class="line">                <span class="keyword">if</span> (connection.State == System.Data.ConnectionState.Open)</span><br><span class="line">                &#123;</span><br><span class="line">                    connection.Close();</span><br><span class="line">                    Console.WriteLine(<span class="string">&quot;Connection closed.&quot;</span>);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="详细说明"><a href="#详细说明" class="headerlink" title="详细说明"></a>详细说明</h3><ol>
+<li><p><strong>导入命名空间</strong></p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">using</span> System.Data.SqlClient;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>定义连接字符串</strong></p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">string</span> connectionString = <span class="string">&quot;Server=your_server_name;Database=your_database_name;User Id=your_username;Password=your_password;&quot;</span>;</span><br></pre></td></tr></table></figure>
+<p>连接字符串包括服务器名称、数据库名称、用户名和密码。请将 <code>your_server_name</code>、<code>your_database_name</code>、<code>your_username</code> 和 <code>your_password</code> 替换为实际值。</p>
+</li>
+<li><p><strong>创建 <code>SqlConnection</code> 对象并打开连接</strong></p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> (SqlConnection connection = <span class="keyword">new</span> SqlConnection(connectionString))</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">try</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">// 打开连接</span></span><br><span class="line">        connection.Open();</span><br><span class="line">        Console.WriteLine(<span class="string">&quot;Connection opened successfully.&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">catch</span> (Exception ex)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">// 捕获并处理异常</span></span><br><span class="line">        Console.WriteLine(<span class="string">&quot;An error occurred: &quot;</span> + ex.Message);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">finally</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">// 确保连接被关闭</span></span><br><span class="line">        <span class="keyword">if</span> (connection.State == System.Data.ConnectionState.Open)</span><br><span class="line">        &#123;</span><br><span class="line">            connection.Close();</span><br><span class="line">            Console.WriteLine(<span class="string">&quot;Connection closed.&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>使用 <code>using</code> 语句确保在代码块执行完毕后自动关闭连接。</p>
+</li>
+<li><p><strong>执行数据库操作</strong><br>在连接打开后，可以在 <code>try</code> 块中执行各种数据库操作。</p>
+</li>
+<li><p><strong>异常处理</strong><br>在 <code>catch</code> 块中捕获并处理任何异常。</p>
+</li>
+<li><p><strong>关闭连接</strong><br>在 <code>finally</code> 块中确保连接被关闭，防止资源泄漏。</p>
+</li>
+</ol>
+<p>这样，你就可以成功地新建一个连接并连接到 SQL Server 数据库了。</p>
+<p><strong>常用方法</strong></p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">connection.Open(); <span class="comment">// 打开数据库连接</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">connection.Close(); <span class="comment">// 关闭数据库连接</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">connection.BeginTransaction(); <span class="comment">// 开始一个数据库事务</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">connection.CreateCommand(); <span class="comment">// 创建并返回一个与连接相关联的命令对象</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>常用属性</strong></p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">connection.ConnectionString; <span class="comment">// 获取或设置用于打开数据库的连接字符串</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">connection.State; <span class="comment">// 获取连接的当前状态</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">connection.Database; <span class="comment">// 获取当前数据库的名称或连接打开后要使用的数据库的名称</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="Command-类"><a href="#Command-类" class="headerlink" title="Command 类"></a>Command 类</h3><p><strong>常用方法</strong></p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">command.ExecuteReader(); <span class="comment">// 执行命令并返回一个 DataReader 对象</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">command.ExecuteNonQuery(); <span class="comment">// 执行命令并返回受影响的行数</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">command.ExecuteScalar(); <span class="comment">// 执行命令并返回单个值（例如聚合值）</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">command.Prepare(); <span class="comment">// 创建命令的准备好的版本</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>常用属性</strong></p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">command.CommandText; <span class="comment">// 获取或设置要对数据源执行的文本命令</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">command.CommandType; <span class="comment">// 获取或设置一个值，该值指示如何解释 CommandText 属性</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">command.Parameters; <span class="comment">// 获取命令的参数集合</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">command.Connection; <span class="comment">// 获取或设置 Command 对象所用的连接</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="DataReader-类"><a href="#DataReader-类" class="headerlink" title="DataReader 类"></a>DataReader 类</h3><p>以下是一个使用 <code>DataReader</code> 从数据库中读取数据的简单示例：</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">using</span> System.Data.SqlClient;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>()</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">// 定义连接字符串</span></span><br><span class="line">        <span class="built_in">string</span> connectionString = <span class="string">&quot;Server=your_server_name;Database=your_database_name;User Id=your_username;Password=your_password;&quot;</span>;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 定义 SQL 查询语句</span></span><br><span class="line">        <span class="built_in">string</span> query = <span class="string">&quot;SELECT StudentID, Name, Age FROM Students&quot;</span>;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 创建 SqlConnection 对象</span></span><br><span class="line">        <span class="keyword">using</span> (SqlConnection connection = <span class="keyword">new</span> SqlConnection(connectionString))</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="comment">// 创建 SqlCommand 对象并设置 SQL 查询和连接</span></span><br><span class="line">            <span class="keyword">using</span> (SqlCommand command = <span class="keyword">new</span> SqlCommand(query, connection))</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">try</span></span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="comment">// 打开连接</span></span><br><span class="line">                    connection.Open();</span><br><span class="line"></span><br><span class="line">                    <span class="comment">// 执行查询并获取一个 DataReader 对象</span></span><br><span class="line">                    <span class="keyword">using</span> (SqlDataReader reader = command.ExecuteReader())</span><br><span class="line">                    &#123;</span><br><span class="line">                        <span class="comment">// 检查 DataReader 是否包含行</span></span><br><span class="line">                        <span class="keyword">if</span> (reader.HasRows)</span><br><span class="line">                        &#123;</span><br><span class="line">                            <span class="comment">// 读取每一行并输出到控制台</span></span><br><span class="line">                            <span class="keyword">while</span> (reader.Read())</span><br><span class="line">                            &#123;</span><br><span class="line">                                Console.WriteLine(<span class="string">$&quot;StudentID: <span class="subst">&#123;reader[<span class="string">&quot;StudentID&quot;</span>]&#125;</span>, Name: <span class="subst">&#123;reader[<span class="string">&quot;Name&quot;</span>]&#125;</span>, Age: <span class="subst">&#123;reader[<span class="string">&quot;Age&quot;</span>]&#125;</span>&quot;</span>);</span><br><span class="line">                            &#125;</span><br><span class="line">                        &#125;</span><br><span class="line">                        <span class="keyword">else</span></span><br><span class="line">                        &#123;</span><br><span class="line">                            Console.WriteLine(<span class="string">&quot;No rows found.&quot;</span>);</span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">catch</span> (Exception ex)</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="comment">// 捕获并处理异常</span></span><br><span class="line">                    Console.WriteLine(<span class="string">&quot;An error occurred: &quot;</span> + ex.Message);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>在这个示例中：</p>
+<ul>
+<li>我们首先定义了连接字符串和 SQL 查询语句。</li>
+<li>然后，我们创建了一个 <code>SqlConnection</code> 对象，并使用 <code>SqlCommand</code> 对象将 SQL 查询语句和连接关联起来。</li>
+<li>我们打开了连接，并执行了查询，获得一个 <code>DataReader</code> 对象。</li>
+<li>我们检查 <code>DataReader</code> 是否包含行，如果有的话，我们使用 <code>reader.Read()</code> 方法来读取每一行，并输出到控制台。</li>
+</ul>
+<p>请确保将 “your_server_name”、”your_database_name”、”your_username” 和 “your_password” 替换为实际的连接信息。</p>
+<p><strong>常用方法</strong></p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dataReader.Read(); <span class="comment">// 读取下一行数据，返回布尔值</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dataReader.Close(); <span class="comment">// 关闭 DataReader 对象</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dataReader.GetInt32(<span class="built_in">int</span> i); <span class="comment">// 获取指定列的 32 位整数值</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dataReader.GetString(<span class="built_in">int</span> i); <span class="comment">// 获取指定列的字符串值</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>常用属性</strong></p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dataReader.FieldCount; <span class="comment">// 获取当前行中的列数</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dataReader.HasRows; <span class="comment">// 获取一个值，该值指示 DataReader 是否包含一行或多行</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dataReader.IsClosed; <span class="comment">// 获取一个值，该值指示 DataReader 是否已关闭</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dataReader[i]; <span class="comment">// 获取指定列的值</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="DataSet-类"><a href="#DataSet-类" class="headerlink" title="DataSet 类"></a>DataSet 类</h3><p>当创建一个 <code>DataSet</code> 时，你可以把它想象成一个内存中的数据库，它可以包含多个 <code>DataTable</code> 对象，每个表都有它自己的列和行。下面是一个简单的示例，演示如何创建一个包含两个表的 <code>DataSet</code>：</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">using</span> System.Data;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>()</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">// 创建一个新的 DataSet</span></span><br><span class="line">        DataSet dataSet = <span class="keyword">new</span> DataSet(<span class="string">&quot;SchoolDataSet&quot;</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 创建第一个 DataTable</span></span><br><span class="line">        DataTable studentTable = <span class="keyword">new</span> DataTable(<span class="string">&quot;Students&quot;</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 添加列到第一个 DataTable</span></span><br><span class="line">        studentTable.Columns.Add(<span class="string">&quot;StudentID&quot;</span>, <span class="keyword">typeof</span>(<span class="built_in">int</span>));</span><br><span class="line">        studentTable.Columns.Add(<span class="string">&quot;Name&quot;</span>, <span class="keyword">typeof</span>(<span class="built_in">string</span>));</span><br><span class="line">        studentTable.Columns.Add(<span class="string">&quot;Age&quot;</span>, <span class="keyword">typeof</span>(<span class="built_in">int</span>));</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 将第一个 DataTable 添加到 DataSet 中</span></span><br><span class="line">        dataSet.Tables.Add(studentTable);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 创建第二个 DataTable</span></span><br><span class="line">        DataTable courseTable = <span class="keyword">new</span> DataTable(<span class="string">&quot;Courses&quot;</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 添加列到第二个 DataTable</span></span><br><span class="line">        courseTable.Columns.Add(<span class="string">&quot;CourseID&quot;</span>, <span class="keyword">typeof</span>(<span class="built_in">int</span>));</span><br><span class="line">        courseTable.Columns.Add(<span class="string">&quot;Name&quot;</span>, <span class="keyword">typeof</span>(<span class="built_in">string</span>));</span><br><span class="line">        courseTable.Columns.Add(<span class="string">&quot;Description&quot;</span>, <span class="keyword">typeof</span>(<span class="built_in">string</span>));</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 将第二个 DataTable 添加到 DataSet 中</span></span><br><span class="line">        dataSet.Tables.Add(courseTable);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 在控制台中显示 DataSet 结构</span></span><br><span class="line">        Console.WriteLine(<span class="string">&quot;DataSet Structure:&quot;</span>);</span><br><span class="line">        <span class="keyword">foreach</span> (DataTable table <span class="keyword">in</span> dataSet.Tables)</span><br><span class="line">        &#123;</span><br><span class="line">            Console.WriteLine(<span class="string">$&quot;Table Name: <span class="subst">&#123;table.TableName&#125;</span>&quot;</span>);</span><br><span class="line">            Console.WriteLine(<span class="string">&quot;Columns:&quot;</span>);</span><br><span class="line">            <span class="keyword">foreach</span> (DataColumn column <span class="keyword">in</span> table.Columns)</span><br><span class="line">            &#123;</span><br><span class="line">                Console.WriteLine(<span class="string">$&quot;- <span class="subst">&#123;column.ColumnName&#125;</span>: <span class="subst">&#123;column.DataType&#125;</span>&quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            Console.WriteLine();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>在这个示例中：</p>
+<ul>
+<li>我们首先创建了一个 <code>DataSet</code>，名为 “SchoolDataSet”。</li>
+<li>然后，我们创建了两个 <code>DataTable</code>，分别是 “Students” 和 “Courses”。</li>
+<li>每个表都有其自己的列，我们使用 <code>Columns.Add()</code> 方法向每个表中添加列。</li>
+<li>最后，我们将这两个表添加到 <code>DataSet</code> 中，并在控制台中显示了 <code>DataSet</code> 的结构。</li>
+</ul>
+<p>这个示例展示了如何创建一个简单的 <code>DataSet</code> 包含两个表，每个表有一些列。</p>
+<p><strong>常用方法</strong></p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dataSet.AcceptChanges(); <span class="comment">// 提交自上次调用 AcceptChanges 以来对 DataSet 所做的所有更改</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dataSet.Clear(); <span class="comment">// 清除 DataSet 中的所有数据</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dataSet.Clone(); <span class="comment">// 克隆 DataSet 结构，包括所有 DataTable 架构、关系和约束</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dataSet.Merge(DataSet dataSet); <span class="comment">// 将指定的 DataSet 与当前 DataSet 合并</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>常用属性</strong></p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dataSet.Tables; <span class="comment">// 获取 DataSet 中所有的 DataTable 对象的集合</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dataSet.DataSetName; <span class="comment">// 获取或设置 DataSet 的名称</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dataSet.HasChanges(); <span class="comment">// 指示自上次调用 AcceptChanges 以来是否对 DataSet 进行了更改</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dataSet.Relations; <span class="comment">// 获取 DataSet 中所有的 DataRelation 对象的集合</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="DataTable-类"><a href="#DataTable-类" class="headerlink" title="DataTable 类"></a>DataTable 类</h3><p><strong>常用方法</strong></p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dataTable.AcceptChanges(); <span class="comment">// 提交自上次调用 AcceptChanges 以来对 DataTable 所做的所有更改</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dataTable.Clear(); <span class="comment">// 清除 DataTable 中的所有数据</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dataTable.Clone(); <span class="comment">// 克隆 DataTable 的结构，包括所有架构和约束</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dataTable.ImportRow(DataRow row); <span class="comment">// 将 DataRow 的副本导入 DataTable 中</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>常用属性</strong></p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dataTable.Columns; <span class="comment">// 获取 DataTable 中所有的 DataColumn 对象的集合</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dataTable.Rows; <span class="comment">// 获取 DataTable 中所有的 DataRow 对象的集合</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dataTable.PrimaryKey; <span class="comment">// 获取或设置一个数组，以确定表的主键列</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dataTable.TableName; <span class="comment">// 获取或设置 DataTable 的名称</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="DataAdapter-类"><a href="#DataAdapter-类" class="headerlink" title="DataAdapter 类"></a>DataAdapter 类</h3><p><strong>常用方法</strong></p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dataAdapter.Fill(DataSet dataSet); <span class="comment">// 使用数据源中的数据填充 DataSet</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dataAdapter.Update(DataSet dataSet); <span class="comment">// 使用 DataSet 的更改更新数据源</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dataAdapter.FillSchema(DataSet dataSet, SchemaType schemaType); <span class="comment">// 将架构信息从数据源添加到 DataSet</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dataAdapter.Dispose(); <span class="comment">// 释放 DataAdapter 使用的资源</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>常用属性</strong></p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dataAdapter.SelectCommand; <span class="comment">// 获取或设置用于从数据源中选择记录的命令</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dataAdapter.InsertCommand; <span class="comment">// 获取或设置用于向数据源插入记录的命令</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dataAdapter.UpdateCommand; <span class="comment">// 获取或设置用于更新数据源中的记录的命令</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dataAdapter.DeleteCommand; <span class="comment">// 获取或设置用于删除数据源中记录的命令</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="DataView-类"><a href="#DataView-类" class="headerlink" title="DataView 类"></a>DataView 类</h3><p><strong>常用方法</strong></p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dataView.Find(<span class="built_in">object</span> key); <span class="comment">// 按主键搜索，并返回相应的 DataRowView</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dataView.FindRows(<span class="built_in">object</span> key); <span class="comment">// 按主键搜索，并返回所有匹配的 DataRowView 对象</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dataView.Sort = <span class="string">&quot;ColumnName ASC&quot;</span>; <span class="comment">// 对 DataView 中的数据进行排序</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dataView.RowFilter = <span class="string">&quot;ColumnName = &#x27;value&#x27;&quot;</span>; <span class="comment">// 筛选 DataView 中的数据</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>常用属性</strong></p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dataView.Table; <span class="comment">// 获取 DataView 所基于的 DataTable</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dataView.Count; <span class="comment">// 获取 DataView 中的记录数</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dataView.AllowEdit; <span class="comment">// 获取或设置一个值，该值指示是否允许对 DataView 中的行进行编辑</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dataView.AllowNew; <span class="comment">// 获取或设置一个值，该值指示是否允许在 DataView 中添加新行</span></span><br></pre></td></tr></table></figure>
+
+<p>这些代码块展示了每个类的常用方法和属性，可以帮助你更好地理解和使用它们。</p>
+<h3 id="SQL注入"><a href="#SQL注入" class="headerlink" title="SQL注入"></a>SQL注入</h3>
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/SQLServer/" rel="prev" title="SQLServer">
+                  <i class="fa fa-angle-left"></i> SQLServer
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/%E9%9D%A2%E8%AF%95%E9%A2%98/" rel="next" title="面试题">
+                  面试题 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2024</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">王小龙</span>
+  </div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/sidebar.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>
