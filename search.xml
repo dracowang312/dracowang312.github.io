@@ -1,6 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>ASP.NET</title>
+    <url>/ASP.NET/</url>
+    <content><![CDATA[<p>ASP.NET是由微软公司开发的一种用于构建动态网页、应用程序和Web服务的开源服务器端Web应用程序框架。它是Microsoft .NET平台的一部分，提供了一套丰富的工具和库，帮助开发者创建高效、安全且可扩展的Web应用。<span id="more"></span>以下是ASP.NET的一些关键特性和组件：</p>
+<ol>
+<li><p><strong>框架类型</strong>：</p>
+<ul>
+<li><strong>Web Forms</strong>：一种基于事件驱动的模型，类似于Windows Forms，适用于快速开发传统的表单提交和回发操作的Web应用。</li>
+<li><strong>MVC（Model-View-Controller）</strong>：一种基于MVC设计模式的框架，分离了应用程序的逻辑、用户界面和输入，适用于更复杂和灵活的Web应用。</li>
+<li><strong>Razor Pages</strong>：一种页面优先的编程模型，简化了页面级开发，适合于处理简单的页面逻辑。</li>
+</ul>
+</li>
+<li><p><strong>核心特性</strong>：</p>
+<ul>
+<li><strong>服务器端技术</strong>：ASP.NET应用在服务器上运行，生成HTML并发送到客户端浏览器。</li>
+<li><strong>状态管理</strong>：提供了多种状态管理技术，如Session、ViewState和Cookies，帮助管理用户会话数据。</li>
+<li><strong>安全性</strong>：内置身份验证和授权功能，包括Windows身份验证、Forms身份验证、OAuth、OpenID Connect等。</li>
+<li><strong>数据访问</strong>：支持多种数据访问技术，如ADO.NET、Entity Framework和LINQ，方便与数据库交互。</li>
+<li><strong>扩展性</strong>：通过中间件（Middleware）和依赖注入（Dependency Injection），ASP.NET应用可以方便地进行功能扩展和配置。</li>
+</ul>
+</li>
+<li><p><strong>开发工具</strong>：</p>
+<ul>
+<li><strong>Visual Studio</strong>：微软的集成开发环境（IDE），提供了强大的调试、代码编辑和发布工具，简化了ASP.NET应用的开发过程。</li>
+<li><strong>Visual Studio Code</strong>：一个轻量级的、跨平台的代码编辑器，支持多种编程语言和扩展，适合前后端开发。</li>
+</ul>
+</li>
+<li><p><strong>部署与运行</strong>：</p>
+<ul>
+<li><strong>跨平台支持</strong>：ASP.NET Core，作为ASP.NET的一个跨平台版本，可以在Windows、Linux和macOS上运行。</li>
+<li><strong>云支持</strong>：与Azure等云服务紧密集成，方便部署和扩展Web应用。</li>
+</ul>
+</li>
+</ol>
+<p>ASP.NET在不断发展演进，从最初的ASP.NET Web Forms到现代化的ASP.NET Core，提供了丰富的功能和灵活的架构，满足了不同规模和复杂度的Web应用需求。</p>
+]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>.net</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>ADO.NET</title>
     <url>/ADO.NET/</url>
     <content><![CDATA[<p>ADO.NET 是 Microsoft .NET 框架中的一组数据访问组件，提供了与各种数据源（如 SQL Server、Oracle、XML 文件等）的连接和交互的功能。它设计用于支持分布式应用程序的数据访问。<span id="more"></span></p>
@@ -141,49 +184,6 @@
 
 <p>这些代码块展示了每个类的常用方法和属性，可以帮助你更好地理解和使用它们。</p>
 <h3 id="SQL注入"><a href="#SQL注入" class="headerlink" title="SQL注入"></a>SQL注入</h3>]]></content>
-      <tags>
-        <tag>.net</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>ASP.NET</title>
-    <url>/ASP.NET/</url>
-    <content><![CDATA[<p>ASP.NET是由微软公司开发的一种用于构建动态网页、应用程序和Web服务的开源服务器端Web应用程序框架。它是Microsoft .NET平台的一部分，提供了一套丰富的工具和库，帮助开发者创建高效、安全且可扩展的Web应用。<span id="more"></span>以下是ASP.NET的一些关键特性和组件：</p>
-<ol>
-<li><p><strong>框架类型</strong>：</p>
-<ul>
-<li><strong>Web Forms</strong>：一种基于事件驱动的模型，类似于Windows Forms，适用于快速开发传统的表单提交和回发操作的Web应用。</li>
-<li><strong>MVC（Model-View-Controller）</strong>：一种基于MVC设计模式的框架，分离了应用程序的逻辑、用户界面和输入，适用于更复杂和灵活的Web应用。</li>
-<li><strong>Razor Pages</strong>：一种页面优先的编程模型，简化了页面级开发，适合于处理简单的页面逻辑。</li>
-</ul>
-</li>
-<li><p><strong>核心特性</strong>：</p>
-<ul>
-<li><strong>服务器端技术</strong>：ASP.NET应用在服务器上运行，生成HTML并发送到客户端浏览器。</li>
-<li><strong>状态管理</strong>：提供了多种状态管理技术，如Session、ViewState和Cookies，帮助管理用户会话数据。</li>
-<li><strong>安全性</strong>：内置身份验证和授权功能，包括Windows身份验证、Forms身份验证、OAuth、OpenID Connect等。</li>
-<li><strong>数据访问</strong>：支持多种数据访问技术，如ADO.NET、Entity Framework和LINQ，方便与数据库交互。</li>
-<li><strong>扩展性</strong>：通过中间件（Middleware）和依赖注入（Dependency Injection），ASP.NET应用可以方便地进行功能扩展和配置。</li>
-</ul>
-</li>
-<li><p><strong>开发工具</strong>：</p>
-<ul>
-<li><strong>Visual Studio</strong>：微软的集成开发环境（IDE），提供了强大的调试、代码编辑和发布工具，简化了ASP.NET应用的开发过程。</li>
-<li><strong>Visual Studio Code</strong>：一个轻量级的、跨平台的代码编辑器，支持多种编程语言和扩展，适合前后端开发。</li>
-</ul>
-</li>
-<li><p><strong>部署与运行</strong>：</p>
-<ul>
-<li><strong>跨平台支持</strong>：ASP.NET Core，作为ASP.NET的一个跨平台版本，可以在Windows、Linux和macOS上运行。</li>
-<li><strong>云支持</strong>：与Azure等云服务紧密集成，方便部署和扩展Web应用。</li>
-</ul>
-</li>
-</ol>
-<p>ASP.NET在不断发展演进，从最初的ASP.NET Web Forms到现代化的ASP.NET Core，提供了丰富的功能和灵活的架构，满足了不同规模和复杂度的Web应用需求。</p>
-]]></content>
-      <categories>
-        <category>前端</category>
-      </categories>
       <tags>
         <tag>.net</tag>
       </tags>
@@ -3464,58 +3464,6 @@
       </categories>
   </entry>
   <entry>
-    <title>WinForm</title>
-    <url>/WinForm/</url>
-    <content><![CDATA[<p>Windows Forms（WinForms）是一个用于构建 Windows 桌面应用程序的图形用户界面（GUI）框架。它是 .NET 框架的一部分，提供了一套丰富的类库和控件，用于创建具有图形界面的应用程序。</p>
-<span id="more"></span>
-
-<h3 id="Windows-Forms-的特点"><a href="#Windows-Forms-的特点" class="headerlink" title="Windows Forms 的特点"></a>Windows Forms 的特点</h3><ol>
-<li><p><strong>事件驱动编程</strong>：WinForms 采用事件驱动的编程模型，用户界面的交互通过事件来处理，例如按钮点击、鼠标移动等。</p>
-</li>
-<li><p><strong>控件丰富</strong>：提供了许多内置控件，如按钮（Button）、标签（Label）、文本框（TextBox）、列表框（ListBox）、数据网格（DataGridView）等，方便快速构建用户界面。</p>
-</li>
-<li><p><strong>设计器支持</strong>：Visual Studio 提供了强大的设计器工具，可以通过拖放控件来快速设计用户界面，自动生成相应的代码。</p>
-</li>
-<li><p><strong>GDI+ 支持</strong>：WinForms 使用 GDI+（图形设备接口）来绘制图形和文本，提供丰富的绘图功能。</p>
-</li>
-</ol>
-<h3 id="创建一个简单的-Windows-Forms-应用程序"><a href="#创建一个简单的-Windows-Forms-应用程序" class="headerlink" title="创建一个简单的 Windows Forms 应用程序"></a>创建一个简单的 Windows Forms 应用程序</h3><p>下面是一个使用 C# 创建简单的 Windows Forms 应用程序的详细步骤。</p>
-<h4 id="1-创建项目"><a href="#1-创建项目" class="headerlink" title="1. 创建项目"></a>1. 创建项目</h4><ul>
-<li>打开 Visual Studio。</li>
-<li>创建一个新的项目，选择“Windows Forms App (.NET Framework)”，并为项目命名。</li>
-</ul>
-<h4 id="2-设计用户界面"><a href="#2-设计用户界面" class="headerlink" title="2. 设计用户界面"></a>2. 设计用户界面</h4><ul>
-<li>在设计器中，拖放控件到窗体上。例如，添加一个按钮和一个标签。</li>
-<li>通过属性窗口，可以设置控件的属性，如文本、位置、大小等。</li>
-</ul>
-<h4 id="3-编写事件处理代码"><a href="#3-编写事件处理代码" class="headerlink" title="3. 编写事件处理代码"></a>3. 编写事件处理代码</h4><p>双击按钮控件，Visual Studio 会自动生成按钮的点击事件处理方法。在生成的代码中，添加改变标签文本的代码。</p>
-<h5 id="示例代码"><a href="#示例代码" class="headerlink" title="示例代码"></a>示例代码</h5><p>以下是一个完整的示例代码，展示如何创建一个带有按钮和标签的简单 Windows Forms 应用程序。</p>
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">using</span> System.Windows.Forms;</span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">WinFormsApp</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">partial</span> <span class="keyword">class</span> <span class="title">Form1</span> : <span class="title">Form</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="title">Form1</span>()</span></span><br><span class="line">        &#123;</span><br><span class="line">            InitializeComponent();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">button1_Click</span>(<span class="params"><span class="built_in">object</span> sender, EventArgs e</span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            label1.Text = <span class="string">&quot;Hello, Windows Forms!&quot;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>在 <code>Form1.Designer.cs</code> 文件中，Visual Studio 生成的代码如下：</p>
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">namespace</span> <span class="title">WinFormsApp</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">partial</span> <span class="keyword">class</span> <span class="title">Form1</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">private</span> System.ComponentModel.IContainer components = <span class="literal">null</span>;</span><br><span class="line">        <span class="keyword">private</span> System.Windows.Forms.Button button1;</span><br><span class="line">        <span class="keyword">private</span> System.Windows.Forms.Label label1;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">protected</span> <span class="keyword">override</span> <span class="keyword">void</span> <span class="title">Dispose</span>(<span class="params"><span class="built_in">bool</span> disposing</span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (disposing &amp;&amp; (components != <span class="literal">null</span>))</span><br><span class="line">            &#123;</span><br><span class="line">                components.Dispose();</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">base</span>.Dispose(disposing);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">InitializeComponent</span>()</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">this</span>.button1 = <span class="keyword">new</span> System.Windows.Forms.Button();</span><br><span class="line">            <span class="keyword">this</span>.label1 = <span class="keyword">new</span> System.Windows.Forms.Label();</span><br><span class="line">            <span class="keyword">this</span>.SuspendLayout();</span><br><span class="line">            <span class="comment">// </span></span><br><span class="line">            <span class="comment">// button1</span></span><br><span class="line">            <span class="comment">// </span></span><br><span class="line">            <span class="keyword">this</span>.button1.Location = <span class="keyword">new</span> System.Drawing.Point(<span class="number">100</span>, <span class="number">50</span>);</span><br><span class="line">            <span class="keyword">this</span>.button1.Name = <span class="string">&quot;button1&quot;</span>;</span><br><span class="line">            <span class="keyword">this</span>.button1.Size = <span class="keyword">new</span> System.Drawing.Size(<span class="number">75</span>, <span class="number">23</span>);</span><br><span class="line">            <span class="keyword">this</span>.button1.TabIndex = <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">this</span>.button1.Text = <span class="string">&quot;Click Me&quot;</span>;</span><br><span class="line">            <span class="keyword">this</span>.button1.UseVisualStyleBackColor = <span class="literal">true</span>;</span><br><span class="line">            <span class="keyword">this</span>.button1.Click += <span class="keyword">new</span> System.EventHandler(<span class="keyword">this</span>.button1_Click);</span><br><span class="line">            <span class="comment">// </span></span><br><span class="line">            <span class="comment">// label1</span></span><br><span class="line">            <span class="comment">// </span></span><br><span class="line">            <span class="keyword">this</span>.label1.AutoSize = <span class="literal">true</span>;</span><br><span class="line">            <span class="keyword">this</span>.label1.Location = <span class="keyword">new</span> System.Drawing.Point(<span class="number">100</span>, <span class="number">100</span>);</span><br><span class="line">            <span class="keyword">this</span>.label1.Name = <span class="string">&quot;label1&quot;</span>;</span><br><span class="line">            <span class="keyword">this</span>.label1.Size = <span class="keyword">new</span> System.Drawing.Size(<span class="number">0</span>, <span class="number">13</span>);</span><br><span class="line">            <span class="keyword">this</span>.label1.TabIndex = <span class="number">1</span>;</span><br><span class="line">            <span class="comment">// </span></span><br><span class="line">            <span class="comment">// Form1</span></span><br><span class="line">            <span class="comment">// </span></span><br><span class="line">            <span class="keyword">this</span>.AutoScaleDimensions = <span class="keyword">new</span> System.Drawing.SizeF(<span class="number">6F</span>, <span class="number">13F</span>);</span><br><span class="line">            <span class="keyword">this</span>.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;</span><br><span class="line">            <span class="keyword">this</span>.ClientSize = <span class="keyword">new</span> System.Drawing.Size(<span class="number">284</span>, <span class="number">261</span>);</span><br><span class="line">            <span class="keyword">this</span>.Controls.Add(<span class="keyword">this</span>.label1);</span><br><span class="line">            <span class="keyword">this</span>.Controls.Add(<span class="keyword">this</span>.button1);</span><br><span class="line">            <span class="keyword">this</span>.Name = <span class="string">&quot;Form1&quot;</span>;</span><br><span class="line">            <span class="keyword">this</span>.Text = <span class="string">&quot;Form1&quot;</span>;</span><br><span class="line">            <span class="keyword">this</span>.ResumeLayout(<span class="literal">false</span>);</span><br><span class="line">            <span class="keyword">this</span>.PerformLayout();</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="4-运行应用程序"><a href="#4-运行应用程序" class="headerlink" title="4. 运行应用程序"></a>4. 运行应用程序</h4><p>按 F5 或点击“启动”按钮运行应用程序，您会看到一个带有按钮和标签的窗体。当您点击按钮时，标签的文本会改变。</p>
-<h3 id="Windows-Forms-的主要控件"><a href="#Windows-Forms-的主要控件" class="headerlink" title="Windows Forms 的主要控件"></a>Windows Forms 的主要控件</h3><p>以下是一些常用的 WinForms 控件：</p>
-<ol>
-<li><strong>Button</strong>：表示一个可点击的按钮。</li>
-<li><strong>Label</strong>：用于显示文本。</li>
-<li><strong>TextBox</strong>：用于输入文本。</li>
-<li><strong>ListBox</strong>：用于显示一个列表。</li>
-<li><strong>ComboBox</strong>：用于显示一个下拉列表。</li>
-<li><strong>CheckBox</strong>：表示一个复选框。</li>
-<li><strong>RadioButton</strong>：表示一个单选按钮。</li>
-<li><strong>DataGridView</strong>：用于显示和编辑表格数据。</li>
-<li><strong>PictureBox</strong>：用于显示图像。</li>
-<li><strong>Panel</strong>：用于容纳其他控件的容器。</li>
-</ol>
-<h3 id="高级功能"><a href="#高级功能" class="headerlink" title="高级功能"></a>高级功能</h3><h4 id="数据绑定"><a href="#数据绑定" class="headerlink" title="数据绑定"></a>数据绑定</h4><p>WinForms 支持数据绑定，可以将数据源（如数据库、集合）绑定到控件，实现数据的显示和交互。</p>
-<h4 id="自定义控件"><a href="#自定义控件" class="headerlink" title="自定义控件"></a>自定义控件</h4><p>您可以创建自定义控件，通过继承现有控件或从头编写控件，添加特定的功能和外观。</p>
-<h4 id="多线程"><a href="#多线程" class="headerlink" title="多线程"></a>多线程</h4><p>为了确保用户界面响应及时，WinForms 提供了多线程支持，可以使用 <code>BackgroundWorker</code> 或 <code>Task</code> 来执行耗时操作，并在完成后更新 UI。</p>
-<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>Windows Forms 是一个功能强大且易于使用的框架，用于构建 Windows 桌面应用程序。它提供了丰富的控件、设计工具和功能，适合快速开发高质量的桌面应用。虽然近年来 WPF 和 UWP 等新技术的出现提供了更多选择，但 WinForms 仍然是许多企业和开发者构建桌面应用的重要工具。</p>
-]]></content>
-  </entry>
-  <entry>
     <title>Linq</title>
     <url>/Linq/</url>
     <content><![CDATA[<p><img src="https://cdn.pixabay.com/photo/2014/09/25/10/09/full-moon-460314_1280.jpg"></p>
@@ -3928,6 +3876,58 @@
 <p><strong>update触发器</strong><br>跟踪用户的交易，交易金额超过20000元，则取消交易，并给出错误提示。</p>
 <figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">trigger</span> trig_update_bank</span><br><span class="line"><span class="keyword">on</span> bank</span><br><span class="line"><span class="keyword">for</span> <span class="keyword">update</span></span><br><span class="line"><span class="keyword">as</span></span><br><span class="line">    <span class="keyword">set</span> nocount <span class="keyword">on</span></span><br><span class="line">    print <span class="string">&#x27;update触发器触发&#x27;</span></span><br><span class="line">    <span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> bank</span><br><span class="line">    <span class="keyword">declare</span> <span class="variable">@beforeMoney</span> money,<span class="variable">@afterMoney</span> money</span><br><span class="line">    <span class="keyword">select</span> <span class="variable">@beforeMoney</span><span class="operator">=</span>currentMoney <span class="keyword">from</span> deleted</span><br><span class="line">    <span class="keyword">select</span> <span class="variable">@afterMoney</span><span class="operator">=</span>currentMoney <span class="keyword">from</span> inserted</span><br><span class="line"></span><br><span class="line">    if <span class="built_in">ABS</span>(<span class="variable">@afterMoney</span><span class="operator">-</span><span class="variable">@beforeMoney</span>)<span class="operator">&gt;</span><span class="number">20000</span></span><br><span class="line">    <span class="keyword">begin</span></span><br><span class="line">        print <span class="string">&#x27;单笔交易金额不能超过20000元&#x27;</span></span><br><span class="line">        <span class="keyword">rollback</span> transaction</span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line"></span><br><span class="line">go</span><br><span class="line"></span><br><span class="line"><span class="keyword">drop</span> <span class="keyword">trigger</span> trig_update_bank</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">update</span> bank <span class="keyword">set</span> currentMoney<span class="operator">+</span><span class="operator">=</span><span class="number">25000</span> <span class="keyword">where</span> cardID<span class="operator">=</span><span class="string">&#x27;10010001&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> TransInfo(transDate,cardID,transType,transMoney) <span class="keyword">values</span>(getdate(),<span class="string">&#x27;10010001&#x27;</span>,<span class="string">&#x27;存款&#x27;</span>,<span class="number">1000</span>)</span><br><span class="line"></span><br><span class="line">go</span><br></pre></td></tr></table></figure>
 <h3 id="instead-of触发器"><a href="#instead-of触发器" class="headerlink" title="instead of触发器"></a>instead of触发器</h3><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">trigger</span> trig_update_insteadof_bank</span><br><span class="line"><span class="keyword">on</span> bank</span><br><span class="line">instead <span class="keyword">of</span> <span class="keyword">update</span></span><br><span class="line"><span class="keyword">as</span></span><br><span class="line">    print <span class="string">&#x27;instead of 触发器触发&#x27;</span></span><br><span class="line">    <span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> bank</span><br><span class="line">    <span class="keyword">declare</span> <span class="variable">@beforeMoney</span> money,<span class="variable">@afterMoney</span> money,<span class="variable">@cardID</span> <span class="type">varchar</span>(<span class="number">10</span>)</span><br><span class="line">    <span class="keyword">select</span> <span class="variable">@beforeMoney</span><span class="operator">=</span>currentMoney,<span class="variable">@cardID</span><span class="operator">=</span>cardID <span class="keyword">from</span> deleted</span><br><span class="line">    <span class="keyword">select</span> <span class="variable">@afterMoney</span><span class="operator">=</span>currentMoney <span class="keyword">from</span> inserted</span><br><span class="line"></span><br><span class="line">    if <span class="built_in">ABS</span>(<span class="variable">@afterMoney</span><span class="operator">-</span><span class="variable">@beforeMoney</span>)<span class="operator">&lt;=</span><span class="number">20000</span></span><br><span class="line">    <span class="keyword">begin</span></span><br><span class="line">        print <span class="string">&#x27;账户更新成功&#x27;</span></span><br><span class="line">        <span class="keyword">update</span> bank <span class="keyword">set</span> currentMoney<span class="operator">=</span><span class="variable">@afterMoney</span> <span class="keyword">where</span> cardID<span class="operator">=</span><span class="variable">@cardID</span></span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line">go</span><br><span class="line"></span><br><span class="line"><span class="keyword">drop</span> <span class="keyword">trigger</span> trig_update_insteadof_bank</span><br><span class="line"><span class="keyword">update</span> bank <span class="keyword">set</span> currentMoney<span class="operator">+</span><span class="operator">=</span><span class="number">1000</span> <span class="keyword">where</span> cardID<span class="operator">=</span><span class="string">&#x27;10010001&#x27;</span></span><br></pre></td></tr></table></figure>
+]]></content>
+  </entry>
+  <entry>
+    <title>WinForm</title>
+    <url>/WinForm/</url>
+    <content><![CDATA[<p>Windows Forms（WinForms）是一个用于构建 Windows 桌面应用程序的图形用户界面（GUI）框架。它是 .NET 框架的一部分，提供了一套丰富的类库和控件，用于创建具有图形界面的应用程序。</p>
+<span id="more"></span>
+
+<h3 id="Windows-Forms-的特点"><a href="#Windows-Forms-的特点" class="headerlink" title="Windows Forms 的特点"></a>Windows Forms 的特点</h3><ol>
+<li><p><strong>事件驱动编程</strong>：WinForms 采用事件驱动的编程模型，用户界面的交互通过事件来处理，例如按钮点击、鼠标移动等。</p>
+</li>
+<li><p><strong>控件丰富</strong>：提供了许多内置控件，如按钮（Button）、标签（Label）、文本框（TextBox）、列表框（ListBox）、数据网格（DataGridView）等，方便快速构建用户界面。</p>
+</li>
+<li><p><strong>设计器支持</strong>：Visual Studio 提供了强大的设计器工具，可以通过拖放控件来快速设计用户界面，自动生成相应的代码。</p>
+</li>
+<li><p><strong>GDI+ 支持</strong>：WinForms 使用 GDI+（图形设备接口）来绘制图形和文本，提供丰富的绘图功能。</p>
+</li>
+</ol>
+<h3 id="创建一个简单的-Windows-Forms-应用程序"><a href="#创建一个简单的-Windows-Forms-应用程序" class="headerlink" title="创建一个简单的 Windows Forms 应用程序"></a>创建一个简单的 Windows Forms 应用程序</h3><p>下面是一个使用 C# 创建简单的 Windows Forms 应用程序的详细步骤。</p>
+<h4 id="1-创建项目"><a href="#1-创建项目" class="headerlink" title="1. 创建项目"></a>1. 创建项目</h4><ul>
+<li>打开 Visual Studio。</li>
+<li>创建一个新的项目，选择“Windows Forms App (.NET Framework)”，并为项目命名。</li>
+</ul>
+<h4 id="2-设计用户界面"><a href="#2-设计用户界面" class="headerlink" title="2. 设计用户界面"></a>2. 设计用户界面</h4><ul>
+<li>在设计器中，拖放控件到窗体上。例如，添加一个按钮和一个标签。</li>
+<li>通过属性窗口，可以设置控件的属性，如文本、位置、大小等。</li>
+</ul>
+<h4 id="3-编写事件处理代码"><a href="#3-编写事件处理代码" class="headerlink" title="3. 编写事件处理代码"></a>3. 编写事件处理代码</h4><p>双击按钮控件，Visual Studio 会自动生成按钮的点击事件处理方法。在生成的代码中，添加改变标签文本的代码。</p>
+<h5 id="示例代码"><a href="#示例代码" class="headerlink" title="示例代码"></a>示例代码</h5><p>以下是一个完整的示例代码，展示如何创建一个带有按钮和标签的简单 Windows Forms 应用程序。</p>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">using</span> System.Windows.Forms;</span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">WinFormsApp</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">partial</span> <span class="keyword">class</span> <span class="title">Form1</span> : <span class="title">Form</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="title">Form1</span>()</span></span><br><span class="line">        &#123;</span><br><span class="line">            InitializeComponent();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">button1_Click</span>(<span class="params"><span class="built_in">object</span> sender, EventArgs e</span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            label1.Text = <span class="string">&quot;Hello, Windows Forms!&quot;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>在 <code>Form1.Designer.cs</code> 文件中，Visual Studio 生成的代码如下：</p>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">namespace</span> <span class="title">WinFormsApp</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">partial</span> <span class="keyword">class</span> <span class="title">Form1</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">private</span> System.ComponentModel.IContainer components = <span class="literal">null</span>;</span><br><span class="line">        <span class="keyword">private</span> System.Windows.Forms.Button button1;</span><br><span class="line">        <span class="keyword">private</span> System.Windows.Forms.Label label1;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">protected</span> <span class="keyword">override</span> <span class="keyword">void</span> <span class="title">Dispose</span>(<span class="params"><span class="built_in">bool</span> disposing</span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (disposing &amp;&amp; (components != <span class="literal">null</span>))</span><br><span class="line">            &#123;</span><br><span class="line">                components.Dispose();</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">base</span>.Dispose(disposing);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">InitializeComponent</span>()</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">this</span>.button1 = <span class="keyword">new</span> System.Windows.Forms.Button();</span><br><span class="line">            <span class="keyword">this</span>.label1 = <span class="keyword">new</span> System.Windows.Forms.Label();</span><br><span class="line">            <span class="keyword">this</span>.SuspendLayout();</span><br><span class="line">            <span class="comment">// </span></span><br><span class="line">            <span class="comment">// button1</span></span><br><span class="line">            <span class="comment">// </span></span><br><span class="line">            <span class="keyword">this</span>.button1.Location = <span class="keyword">new</span> System.Drawing.Point(<span class="number">100</span>, <span class="number">50</span>);</span><br><span class="line">            <span class="keyword">this</span>.button1.Name = <span class="string">&quot;button1&quot;</span>;</span><br><span class="line">            <span class="keyword">this</span>.button1.Size = <span class="keyword">new</span> System.Drawing.Size(<span class="number">75</span>, <span class="number">23</span>);</span><br><span class="line">            <span class="keyword">this</span>.button1.TabIndex = <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">this</span>.button1.Text = <span class="string">&quot;Click Me&quot;</span>;</span><br><span class="line">            <span class="keyword">this</span>.button1.UseVisualStyleBackColor = <span class="literal">true</span>;</span><br><span class="line">            <span class="keyword">this</span>.button1.Click += <span class="keyword">new</span> System.EventHandler(<span class="keyword">this</span>.button1_Click);</span><br><span class="line">            <span class="comment">// </span></span><br><span class="line">            <span class="comment">// label1</span></span><br><span class="line">            <span class="comment">// </span></span><br><span class="line">            <span class="keyword">this</span>.label1.AutoSize = <span class="literal">true</span>;</span><br><span class="line">            <span class="keyword">this</span>.label1.Location = <span class="keyword">new</span> System.Drawing.Point(<span class="number">100</span>, <span class="number">100</span>);</span><br><span class="line">            <span class="keyword">this</span>.label1.Name = <span class="string">&quot;label1&quot;</span>;</span><br><span class="line">            <span class="keyword">this</span>.label1.Size = <span class="keyword">new</span> System.Drawing.Size(<span class="number">0</span>, <span class="number">13</span>);</span><br><span class="line">            <span class="keyword">this</span>.label1.TabIndex = <span class="number">1</span>;</span><br><span class="line">            <span class="comment">// </span></span><br><span class="line">            <span class="comment">// Form1</span></span><br><span class="line">            <span class="comment">// </span></span><br><span class="line">            <span class="keyword">this</span>.AutoScaleDimensions = <span class="keyword">new</span> System.Drawing.SizeF(<span class="number">6F</span>, <span class="number">13F</span>);</span><br><span class="line">            <span class="keyword">this</span>.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;</span><br><span class="line">            <span class="keyword">this</span>.ClientSize = <span class="keyword">new</span> System.Drawing.Size(<span class="number">284</span>, <span class="number">261</span>);</span><br><span class="line">            <span class="keyword">this</span>.Controls.Add(<span class="keyword">this</span>.label1);</span><br><span class="line">            <span class="keyword">this</span>.Controls.Add(<span class="keyword">this</span>.button1);</span><br><span class="line">            <span class="keyword">this</span>.Name = <span class="string">&quot;Form1&quot;</span>;</span><br><span class="line">            <span class="keyword">this</span>.Text = <span class="string">&quot;Form1&quot;</span>;</span><br><span class="line">            <span class="keyword">this</span>.ResumeLayout(<span class="literal">false</span>);</span><br><span class="line">            <span class="keyword">this</span>.PerformLayout();</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="4-运行应用程序"><a href="#4-运行应用程序" class="headerlink" title="4. 运行应用程序"></a>4. 运行应用程序</h4><p>按 F5 或点击“启动”按钮运行应用程序，您会看到一个带有按钮和标签的窗体。当您点击按钮时，标签的文本会改变。</p>
+<h3 id="Windows-Forms-的主要控件"><a href="#Windows-Forms-的主要控件" class="headerlink" title="Windows Forms 的主要控件"></a>Windows Forms 的主要控件</h3><p>以下是一些常用的 WinForms 控件：</p>
+<ol>
+<li><strong>Button</strong>：表示一个可点击的按钮。</li>
+<li><strong>Label</strong>：用于显示文本。</li>
+<li><strong>TextBox</strong>：用于输入文本。</li>
+<li><strong>ListBox</strong>：用于显示一个列表。</li>
+<li><strong>ComboBox</strong>：用于显示一个下拉列表。</li>
+<li><strong>CheckBox</strong>：表示一个复选框。</li>
+<li><strong>RadioButton</strong>：表示一个单选按钮。</li>
+<li><strong>DataGridView</strong>：用于显示和编辑表格数据。</li>
+<li><strong>PictureBox</strong>：用于显示图像。</li>
+<li><strong>Panel</strong>：用于容纳其他控件的容器。</li>
+</ol>
+<h3 id="高级功能"><a href="#高级功能" class="headerlink" title="高级功能"></a>高级功能</h3><h4 id="数据绑定"><a href="#数据绑定" class="headerlink" title="数据绑定"></a>数据绑定</h4><p>WinForms 支持数据绑定，可以将数据源（如数据库、集合）绑定到控件，实现数据的显示和交互。</p>
+<h4 id="自定义控件"><a href="#自定义控件" class="headerlink" title="自定义控件"></a>自定义控件</h4><p>您可以创建自定义控件，通过继承现有控件或从头编写控件，添加特定的功能和外观。</p>
+<h4 id="多线程"><a href="#多线程" class="headerlink" title="多线程"></a>多线程</h4><p>为了确保用户界面响应及时，WinForms 提供了多线程支持，可以使用 <code>BackgroundWorker</code> 或 <code>Task</code> 来执行耗时操作，并在完成后更新 UI。</p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>Windows Forms 是一个功能强大且易于使用的框架，用于构建 Windows 桌面应用程序。它提供了丰富的控件、设计工具和功能，适合快速开发高质量的桌面应用。虽然近年来 WPF 和 UWP 等新技术的出现提供了更多选择，但 WinForms 仍然是许多企业和开发者构建桌面应用的重要工具。</p>
 ]]></content>
   </entry>
   <entry>
