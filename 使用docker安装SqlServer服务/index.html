@@ -19,29 +19,29 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"draco.wang","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.20.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":20,"offset":30},"hljswrap":true,"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":"truw","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="ASP.NET是由微软公司开发的一种用于构建动态网页、应用程序和Web服务的开源服务器端Web应用程序框架。它是Microsoft .NET平台的一部分，提供了一套丰富的工具和库，帮助开发者创建高效、安全且可扩展的Web应用。">
+    <meta name="description" content="使用docker安装SqlServer服务环境：Debain amd64 首先，确保你的Debian系统上已经安装了Docker。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ASP.NET文档">
-<meta property="og:url" content="https://draco.wang/ASP.NET/index.html">
+<meta property="og:title" content="使用docker安装SqlServer服务">
+<meta property="og:url" content="https://draco.wang/%E4%BD%BF%E7%94%A8docker%E5%AE%89%E8%A3%85SqlServer%E6%9C%8D%E5%8A%A1/index.html">
 <meta property="og:site_name" content="王小龙的博客">
-<meta property="og:description" content="ASP.NET是由微软公司开发的一种用于构建动态网页、应用程序和Web服务的开源服务器端Web应用程序框架。它是Microsoft .NET平台的一部分，提供了一套丰富的工具和库，帮助开发者创建高效、安全且可扩展的Web应用。">
+<meta property="og:description" content="使用docker安装SqlServer服务环境：Debain amd64 首先，确保你的Debian系统上已经安装了Docker。">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-06-05T16:00:00.000Z">
-<meta property="article:modified_time" content="2024-07-01T02:03:19.291Z">
+<meta property="article:published_time" content="2024-06-28T05:58:31.000Z">
+<meta property="article:modified_time" content="2024-07-01T02:03:23.750Z">
 <meta property="article:author" content="王小龙">
-<meta property="article:tag" content=".net">
-<meta property="article:tag" content="asp.net">
+<meta property="article:tag" content="docker">
+<meta property="article:tag" content="sqlserver">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://draco.wang/ASP.NET/">
+<link rel="canonical" href="https://draco.wang/%E4%BD%BF%E7%94%A8docker%E5%AE%89%E8%A3%85SqlServer%E6%9C%8D%E5%8A%A1/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://draco.wang/ASP.NET/","path":"ASP.NET/","title":"ASP.NET文档"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://draco.wang/%E4%BD%BF%E7%94%A8docker%E5%AE%89%E8%A3%85SqlServer%E6%9C%8D%E5%8A%A1/","path":"使用docker安装SqlServer服务/","title":"使用docker安装SqlServer服务"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>ASP.NET文档 | 王小龙的博客</title>
+<title>使用docker安装SqlServer服务 | 王小龙的博客</title>
   
 
 
@@ -128,7 +128,7 @@
   
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -141,6 +141,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8docker%E5%AE%89%E8%A3%85SqlServer%E6%9C%8D%E5%8A%A1"><span class="nav-number">1.</span> <span class="nav-text">使用docker安装SqlServer服务</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8B%89%E5%8F%96%E9%95%9C%E5%83%8F"><span class="nav-number">1.1.</span> <span class="nav-text">拉取镜像</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E6%96%87%E4%BB%B6%E5%A4%B9"><span class="nav-number">1.2.</span> <span class="nav-text">创建文件夹</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%99%E6%96%87%E4%BB%B6%E5%A4%B9%E6%9D%83%E9%99%90"><span class="nav-number">1.3.</span> <span class="nav-text">给文件夹权限</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E5%AE%B9%E5%99%A8"><span class="nav-number">1.4.</span> <span class="nav-text">创建容器</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -198,7 +199,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://draco.wang/ASP.NET/">
+    <link itemprop="mainEntityOfPage" href="https://draco.wang/%E4%BD%BF%E7%94%A8docker%E5%AE%89%E8%A3%85SqlServer%E6%9C%8D%E5%8A%A1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.png">
@@ -211,12 +212,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="ASP.NET文档 | 王小龙的博客">
+      <meta itemprop="name" content="使用docker安装SqlServer服务 | 王小龙的博客">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          ASP.NET文档
+          使用docker安装SqlServer服务
         </h1>
 
         <div class="post-meta-container">
@@ -227,23 +228,14 @@
       </span>
       <span class="post-meta-item-text">发表于</span>
 
-      <time title="创建时间：2024-06-06 00:00:00" itemprop="dateCreated datePublished" datetime="2024-06-06T00:00:00+08:00">2024-06-06</time>
+      <time title="创建时间：2024-06-28 13:58:31" itemprop="dateCreated datePublished" datetime="2024-06-28T13:58:31+08:00">2024-06-28</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-07-01 10:03:19" itemprop="dateModified" datetime="2024-07-01T10:03:19+08:00">2024-07-01</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
-        </span>
+      <time title="修改时间：2024-07-01 10:03:23" itemprop="dateModified" datetime="2024-07-01T10:03:23+08:00">2024-07-01</time>
     </span>
 
   
@@ -255,39 +247,19 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><p>ASP.NET是由微软公司开发的一种用于构建动态网页、应用程序和Web服务的开源服务器端Web应用程序框架。它是Microsoft .NET平台的一部分，提供了一套丰富的工具和库，帮助开发者创建高效、安全且可扩展的Web应用。<span id="more"></span>以下是ASP.NET的一些关键特性和组件：</p>
-<ol>
-<li><p><strong>框架类型</strong>：</p>
-<ul>
-<li><strong>Web Forms</strong>：一种基于事件驱动的模型，类似于Windows Forms，适用于快速开发传统的表单提交和回发操作的Web应用。</li>
-<li><strong>MVC（Model-View-Controller）</strong>：一种基于MVC设计模式的框架，分离了应用程序的逻辑、用户界面和输入，适用于更复杂和灵活的Web应用。</li>
-<li><strong>Razor Pages</strong>：一种页面优先的编程模型，简化了页面级开发，适合于处理简单的页面逻辑。</li>
-</ul>
-</li>
-<li><p><strong>核心特性</strong>：</p>
-<ul>
-<li><strong>服务器端技术</strong>：ASP.NET应用在服务器上运行，生成HTML并发送到客户端浏览器。</li>
-<li><strong>状态管理</strong>：提供了多种状态管理技术，如Session、ViewState和Cookies，帮助管理用户会话数据。</li>
-<li><strong>安全性</strong>：内置身份验证和授权功能，包括Windows身份验证、Forms身份验证、OAuth、OpenID Connect等。</li>
-<li><strong>数据访问</strong>：支持多种数据访问技术，如ADO.NET、Entity Framework和LINQ，方便与数据库交互。</li>
-<li><strong>扩展性</strong>：通过中间件（Middleware）和依赖注入（Dependency Injection），ASP.NET应用可以方便地进行功能扩展和配置。</li>
-</ul>
-</li>
-<li><p><strong>开发工具</strong>：</p>
-<ul>
-<li><strong>Visual Studio</strong>：微软的集成开发环境（IDE），提供了强大的调试、代码编辑和发布工具，简化了ASP.NET应用的开发过程。</li>
-<li><strong>Visual Studio Code</strong>：一个轻量级的、跨平台的代码编辑器，支持多种编程语言和扩展，适合前后端开发。</li>
-</ul>
-</li>
-<li><p><strong>部署与运行</strong>：</p>
-<ul>
-<li><strong>跨平台支持</strong>：ASP.NET Core，作为ASP.NET的一个跨平台版本，可以在Windows、Linux和macOS上运行。</li>
-<li><strong>云支持</strong>：与Azure等云服务紧密集成，方便部署和扩展Web应用。</li>
-</ul>
-</li>
-</ol>
-<p>ASP.NET在不断发展演进，从最初的ASP.NET Web Forms到现代化的ASP.NET Core，提供了丰富的功能和灵活的架构，满足了不同规模和复杂度的Web应用需求。</p>
-<p>EFcore</p>
+    <div class="post-body" itemprop="articleBody"><h2 id="使用docker安装SqlServer服务"><a href="#使用docker安装SqlServer服务" class="headerlink" title="使用docker安装SqlServer服务"></a>使用docker安装SqlServer服务</h2><p>环境：Debain amd64</p>
+<p>首先，确保你的Debian系统上已经安装了Docker。</p>
+<span id="more"></span>
+
+<h3 id="拉取镜像"><a href="#拉取镜像" class="headerlink" title="拉取镜像"></a>拉取镜像</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo docker pull mcr.microsoft.com/mssql/server</span><br></pre></td></tr></table></figure>
+
+<h3 id="创建文件夹"><a href="#创建文件夹" class="headerlink" title="创建文件夹"></a>创建文件夹</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mkdir volume1/docker/sqlserver</span><br><span class="line">mkdir volume1/docker/sqlserver/log</span><br><span class="line">mkdir volume1/docker/sqlserver/data</span><br></pre></td></tr></table></figure>
+
+<h3 id="给文件夹权限"><a href="#给文件夹权限" class="headerlink" title="给文件夹权限"></a>给文件夹权限</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo chmod -R 770 volume1/docker/sqlserver/log</span><br><span class="line">sudo chmod -R 770 volume1/docker/sqlserver/data</span><br></pre></td></tr></table></figure>
+
+<h3 id="创建容器"><a href="#创建容器" class="headerlink" title="创建容器"></a>创建容器</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -e &quot;ACCEPT_EULA=Y&quot; -e &quot;SA_PASSWORD=Abc@12332100&quot; --network=host -v /volume1/docker/sqlserver/data:/var/opt/mssql/data -v /volume1/docker/sqlserver/log:/var/opt/mssql/log --restart=always --name sqlserver -d mcr.microsoft.com/mssql/server</span><br></pre></td></tr></table></figure>
+
+<p><strong>注意</strong>：密码应符合 SQL Server 默认密码策略，否则容器无法设置 SQL Server，会停止工作。 默认情况下，密码必须为至少八个字符且包含以下四种字符中的三种：大写字母、小写字母、十进制数字、符号。 可使用 <a target="_blank" rel="noopener" href="https://docs.docker.com/engine/reference/commandline/logs/"><code>docker logs</code></a> 命令检查错误日志。</p>
 
     </div>
 
@@ -297,22 +269,19 @@
 
     <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/net/" rel="tag"># .net</a>
-              <a href="/tags/asp-net/" rel="tag"># asp.net</a>
+              <a href="/tags/docker/" rel="tag"># docker</a>
+              <a href="/tags/sqlserver/" rel="tag"># sqlserver</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/jQuery/" rel="prev" title="jQuery文档">
-                  <i class="fa fa-angle-left"></i> jQuery文档
+                <a href="/ASP.NET/" rel="prev" title="ASP.NET文档">
+                  <i class="fa fa-angle-left"></i> ASP.NET文档
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/%E4%BD%BF%E7%94%A8docker%E5%AE%89%E8%A3%85SqlServer%E6%9C%8D%E5%8A%A1/" rel="next" title="使用docker安装SqlServer服务">
-                  使用docker安装SqlServer服务 <i class="fa fa-angle-right"></i>
-                </a>
             </div>
           </div>
     </footer>
