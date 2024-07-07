@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人简历</title>
+    <link rel="stylesheet" href="//at.alicdn.com/t/c/font_4608317_hrvyv8puc3t.css">
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            color: #555;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+        a{
+            text-decoration: none;
+            color:#1a0dab;
+        }
+        p{
+            margin-bottom: 4px;
+        }
+
+        html {
+            height: 100%;
+        }
+        h2{
+            color: #369;
+            font-size: 25px;
+            font-weight: 400;
+            padding: 6px 0;
+        }
+        h3{
+            font-size: 16px;
+            padding: 2px 0;
+            color: #333;
+            padding: 4px 0;
+        }
+
+        body {
+            width: 210mm;
+            height: 297mm;
+            margin: 0 auto;
+            font-family: Arial, sans-serif;
+            padding: 3mm;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 
+                        0 8px 16px rgba(0, 0, 0, 0.1), 
+                        0 16px 32px rgba(0, 0, 0, 0.1);
+        }
+        .iconfont{
+            font-size: 20px;
+            color: #333;
+            font-weight: 600;
+        }
+
+        .resume {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .header {
+            display: flex;
+            
+            align-items: center;
+
+        }
+
+        .name{
+            color: #369;
+            font-size: 30px;
+            font-weight: 600;
+        }
+        .contact-me{
+            display: flex;
+            flex-direction: row;
+            padding: 3mm 0;
+            align-items: center;
+            justify-content: start;
+            padding-bottom: 5px;
+            border-bottom: 2px dashed #369;
+        }
+        .contact-me>.contact-me-content{
+            margin-right: 2mm;
+            font-size: 12px;
+        }
+        .contact-me>.iconfont{
+            margin-right: 1mm;
+        }
+     
+
+        .main {
+            flex: 1;
+            display: flex;
+            flex-direction:row;
+        }
+        .main .iconfont{
+            color: #369;
+            font-weight: 400;
+            font-size: 25px;
+            margin-right: 2mm;
+        }
+
+        .subtitle-box{
+            display: flex;
+            justify-content: start;
+            flex-direction: row;
+            align-items: center;
+        }
+        .main-box{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            margin-top: 2px;
+        }
+        .main-content-box{
+            font-size: 14px;
+            
+        }
+        .main-content-box>ul{
+            
+            list-style-type: none;
+        }
+        .main-content-box>ul>li>ul{
+            padding-left: 15px;
+        }
+        .main-part1{
+            display: flex;
+            flex: 1;
+            flex-direction: column;
+            width: 50%;
+            padding-right: 10px;
+            
+            border-right: 2px dashed #369;
+        }
+        .main-part2{
+            
+            display: flex;
+            flex: 1;
+            flex-direction: column;
+            padding-left: 10px;
+        }
+       
+    </style>
+</head>
+<body>
+    <div class="resume">
+       
+        <div class="header">
+            <h2 class="name">王小龙</h2>
+        </div>
+        <div class="contact-me">
+            <span class="iconfont icon-mail"></span>
+            <span class="contact-me-content">xiaolong6510@gmail.com</span>
+            <span class="iconfont icon-dizhi"></span>
+            <span class="contact-me-content">苏州市吴江区震泽镇</span>
+            <span class="iconfont icon-shouji"></span>
+            <span class="contact-me-content">19295196510</span>
+
+
+        </div>
+        <div class="main">
+            <div class="main-part1">
+                <div class="main-box">
+                    <div class="subtitle-box">
+                        <span class="iconfont icon-gongzuo"></span>
+                        <h2 class="subtitle">工作经历</h2>
+                    </div>
+                    <div class="main-content-box">
+                        <ul>
+                            <li><p>2021.6-2022.2 苏州沃土生态农业发展有限公司 运营专员</p></li>
+                            <li><p>2022.3-2023.7 招商银行股份有限公司信用卡中心 业务代表</p></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="main-box">
+                    <div class="subtitle-box">
+                        <span class="iconfont icon-jiaoyu"></span>
+                        <h2 class="subtitle">教育经历</h2>
+                    </div>
+                    <div class="main-content-box">
+                        <ul>
+                            <li><p>2015-2018 吴江平望中学</p></li>
+                            <li><p>2018-2021 南京铁道学院 城市轨道交通车辆技术</p></li>
+                            <li><p>2024.2-2024.7 苏州极客营 c#全栈开发</p></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="main-box">
+                    <div class="subtitle-box">
+                        <span class="iconfont icon-xiangmu"></span>
+                    <h2 class="subtitle">项目经历</h2>
+                    </div>
+                    <div class="main-content-box">
+
+                        <ul>
+                            <li>
+                                <h3>企业人力资源管理系统</h3>
+                                <ul>
+                                    <li><p>使用ASP.NET MVC开发，功能包括员工信息管理、考勤管理、薪资管理等。
+                                       </p>
+                                    </li>
+                                    <li>
+                                        <p>使用EF Core代码优先模式创建数据库。
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>使用SQL Server进行数据存储和管理。
+                                        </p>
+                                    </li>
+                                    <li><p>
+                                        通过docker技术部署于Debain系统</p>
+                                    </li>
+                                    
+                                </ul>
+                            </li>
+                            <li>
+                                <h3>电影院售票系统</h3>
+                                <ul>
+                                    <li><p>使用WinForms开发，功能包括购票、座位选择等。</p></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h3>社区医院药品信息管理系统</h3>
+                                <ul>
+                                    <li><p>使用WinForms开发，功能包括药品入库、出库、库存管理等</p></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="hobby main-box">
+                    <div class="subtitle-box">
+                        <span class="iconfont icon-aihao"></span>
+                        <h2 class="subtitle">兴趣爱好</h2>
+                    </div>
+                    <div class="main-content-box">
+                        <ul>
+                            <li>
+                                <h3>智能家居自动化 - Home Assistant 项目</h3>
+                                <ul>
+                                    <li>
+                                        <p>项目描述: 使用Docker容器技术在Debian系统上搭建Home Assistant项目。实现包括灯光控制、安全监控、环境监测等。</p>
+                                    </li>
+                                    <li>
+                                        <p>技术栈: Home Assistant、Python、YAML、Modbus、Homebridge、RTSP、JavaScript、Docker、Debian。</p>
+                                    </li>
+                                    <li>
+                                        <p>主要功能:</p>
+                                        <ul>
+                                            <li><p>灯光控制: 实现智能灯光控制，自动调节灯光亮度和颜色，基于时间、传感器数据和用户偏好。</p></li>
+                                            <li><p>安全监控: 使用RTSP协议将摄像头接入系统，提供实时视频监控。</p></li>
+                 
+                                            <li><p>智能电表数据读取: 使用Modbus协议连接智能电表，实时读取电力消耗数据并进行分析和显示。</p></li>
+                                            <li><p>开关控制: 使用Modbus协议连接开关，实现多路开关的控制。</p></li>
+                                            <li><p>设备桥接: 使用Homebridge将设备桥接到Apple的家庭App，实现通过iOS设备控制智能家居。</p></li>
+                                          
+                                            
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="main-part2">
+                <div class="main-box">
+                    <div class="subtitle-box">
+                        <span class="iconfont icon-gongju"></span>
+                        <h2 class="subtitle">工作技能</h2>
+                    </div>
+                    <div class="main-content-box">
+                        <ul>
+                            <li>
+                                <h3>编程语言</h3>
+                                <ul>
+                                    <li><p>熟悉C#，掌握基本的面向对象编程（OOP）概念和应用。</p></li>
+                                    <li><p>熟悉HTML、CSS、JavaScript，能够实现基本的前端交互效果。</p></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h3>Web开发</h3>
+                                <ul>
+                                    <li><p>掌握ASP.NET，MVC，API框架用于开发Web应用程序。</p></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h3>桌面应用开发</h3>
+                                <ul>
+                                    <li><p>了解WinForms，能够开发基本的桌面应用程序。</p></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h3>数据库技术</h3>
+                                <ul>
+                                    <li><p>掌握SQL语句，会基本的增删改查和简单的存储过程</p></li>
+                                    <li><p>了解SQL Server，能够进行基本的数据库设计和查询操作。</p></li>
+                                    <li><p>熟悉ADO.NET，用于与数据库进行交互。</p></li>
+                                    <li><p>了解并使用EF Core进行数据库访问和ORM操作。</p></li>
+                                    <li><p>掌握LINQ用于数据查询和操作。</p></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h3>前端开发</h3>
+                                <ul>
+                                    <li><p>熟悉JavaScript和jQuery，能够实现基本的前端交互效果。</p></li>
+                                    <li><p>掌握HTML和CSS，能够编写简单的网页。</p></li>
+                                    <li><p>了解Ajax，能与服务端进行简单的数据交互</p></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h3>其他技能</h3>
+                                <ul>
+                                    <li><p>具备在windows上使用Visual Studio 2022进行.net开发和调试的能力。</p></li>
+                                    <li><p>基本了解Git版本控制系统，用于代码管理。</p></li>
+                                    <li><p>熟悉Docker，会使用基本命令,用于应用容器化和部署。</p></li>
+                                    <li><p>熟悉Linux系统和命令行操作，能够在Linux环境中进行开发和维护。</p></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="main-box">
+                    <div class="subtitle-box">
+                        <span class="iconfont icon-boke"></span>
+                        <h2 class="subtitle">博客</h2> 
+                    </div>
+                    <div class="main-content-box">
+                        <ul>
+                            <li>
+                                <h3>博客网站 - 基于Hexo框架</h3>
+                                <h3><a href="http://draco.wang">https://draco.wang</a></h3>
+                    
+                                
+                                <ul>
+
+                                    <li><p>项目描述: 使用Hexo框架搭建个人博客，通过Git将生成的静态页面部署到GitHub Pages。</p></li>
+                                    <li><p>技术栈: Hexo、Node.js、Git、Markdown、CSS、JavaScript。</p></li>
+                                    <li>主题定制: 根据个人需求自定义博客主题，调整网站的外观和布局。</li>
+                                    <li><p>部署和更新: 使用Git进行版本控制，自动化部署博客到静态网站托管平台。</p></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>        
+            </div>
+        </div>
+    </div>
+</body>
+</html>
